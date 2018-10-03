@@ -74,7 +74,7 @@ const router = new Router({
       },
     },
     {
-      path: '/eight/flock',
+      path: '/eight/flock/:flockId',
       name: 'flock',
       component: EightFlockView,
     },
