@@ -1,9 +1,15 @@
 import Vue from 'vue';
-import App from './App.vue';
+import AudioVisual from 'vue-audio-visual';
+
 import router from './router';
 import store from './store';
 
-Vue.config.productionTip = false;
+import App from './App.vue';
+
+Vue.config.productionTip = true;
+Vue.config.devtools = true;
+
+Vue.use(AudioVisual);
 
 new Vue({
   router,
