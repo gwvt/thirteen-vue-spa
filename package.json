@@ -1,7 +1,8 @@
 {
   "name": "thirteen-vue-spa",
   "version": "0.1.0",
-  "private": true,
+  "author": "Gregory White",
+  "license": "CC BY-NC-SA 4.0",
   "homepage": "git@github.com:gwvt/thirteen-vue-spa",
   "scripts": {
     "serve": "vue-cli-service serve",
