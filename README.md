@@ -5,14 +5,8 @@
 See it [here](https://gwvt.github.io/thirteen-vue-spa/). Vue devtools and warnings are turned on for production so you can kick the tires.
 
 ## to run locally
-
-### Project setup
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
