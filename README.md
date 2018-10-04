@@ -9,6 +9,11 @@ See it [here](https://gwvt.github.io/thirteen-vue-spa/). Vue devtools and warnin
 npm install
 npm run serve
 ```
+Then, to link with a locally run [thirteen-vue-standalone](https://github.com/gwvt/thirteen-vue-standalone), add a file .env.development.local to the root dir with this content:
+```
+VUE_APP_STANDALONE_URL=localhost:8081
+```
+And follow instructions there to spin up a local site. 
 
 ## Resources on Vue
 
