@@ -8,7 +8,8 @@
       </a>
     </div>
   </div>
-  <eight-flock v-bind:flock="flock"
+  <eight-flock v-if="flock"
+               v-bind:flock="flock"
                viewMode="flock" />
 </div>
 </template>
@@ -19,7 +20,13 @@ import EightFlock from './EightFlock.vue';
 export default {
   name: 'EightFlockView',
   components: {
-    EightFlock
+    EightFlock,
+  },
+  props: {
+    flockId: {
+      type: String,
+      required: false,
+    },
   },
   data() {
     return {
@@ -38,7 +45,9 @@ export default {
     },
   },
   created() {
-    this.flock = this.$store.state.flocks.find(flock => flock.id === this.$route.params.flockId);
+    const flockIdNumber = parseInt(this.flockId, 10);
+    this.flock = this.$store.state.flocks
+      .find(flock => flock.id === flockIdNumber);
   },
   methods: {
     goBack() {

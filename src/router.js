@@ -77,6 +77,7 @@ const router = new Router({
       path: '/eight/flock/:flockId',
       name: 'flock',
       component: EightFlockView,
+      props: true,
     },
     {
       path: '/error',
@@ -89,13 +90,6 @@ const router = new Router({
       },
     },
   ],
-});
-
-router.beforeEach((to, from, next) => {
-  if (to.name === 'flock' && !to.params.flockId) {
-    next({ path: '/eight' });
-  }
-  next();
 });
 
 export default router;

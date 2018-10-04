@@ -66,10 +66,11 @@ export default {
       return disabled[buttonName];
     },
     viewFlock(flockId) {
+      const flockIdString = flockId.toString();
       this.$router.push({
         name: 'flock',
         params: {
-          flockId,
+          flockId: flockIdString,
         },
       });
     },
