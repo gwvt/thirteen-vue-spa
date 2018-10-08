@@ -55,6 +55,7 @@ export default {
 
 .narrow {
   width: 30%;
+  max-width: 10rem;
 }
 
 .vertical-spacing {
