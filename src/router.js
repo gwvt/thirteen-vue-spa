@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import store from './store';
+
 import PageOne from '@/components/pages/01/PageOne.vue';
 import PageTwo from '@/components/pages/02/PageTwo.vue';
 import PageThree from '@/components/pages/03/PageThree.vue';
@@ -90,6 +92,17 @@ const router = new Router({
       },
     },
   ],
+});
+
+router.beforeEach((to, from, next) => {
+  const validFlockId = store.state.flocks
+    .map(flock => flock.id)
+    .includes(to.params.flockId);
+  if (to.name === 'flock' && !validFlockId) {
+    next({ path: '/eight' });
+  } else {
+    next();
+  }
 });
 
 export default router;

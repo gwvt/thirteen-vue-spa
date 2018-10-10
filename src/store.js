@@ -7,17 +7,17 @@ export default new Vuex.Store({
   state: {
     flocks: [
       {
-        id: 1,
+        id: '1',
         setting: 'in the autumn',
         birds: 1,
       },
       {
-        id: 2,
+        id: '2',
         setting: 'walking',
         birds: 1,
       },
       {
-        id: 3,
+        id: '3',
         setting: 'in the cedar-limbs',
         birds: 1,
       },

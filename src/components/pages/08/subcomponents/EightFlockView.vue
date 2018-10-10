@@ -45,9 +45,8 @@ export default {
     },
   },
   created() {
-    const flockIdNumber = parseInt(this.flockId, 10);
     this.flock = this.$store.state.flocks
-      .find(flock => flock.id === flockIdNumber);
+      .find(flock => flock.id === this.flockId);
   },
   methods: {
     goBack() {
