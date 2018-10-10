@@ -13,7 +13,10 @@ Then, to link with a locally run [thirteen-vue-standalone](https://github.com/gw
 ```
 VUE_APP_STANDALONE_URL=localhost:8081
 ```
-And follow instructions there to spin up a local site. 
+And follow instructions there to spin up a local site.
+
+### * A note on this repo ###
+While the code contained herein is generally representative of how one would write Vue for real-world uses, the application structure is specifically geared to the purposes of a presentation.
 
 ## Resources on Vue
 
