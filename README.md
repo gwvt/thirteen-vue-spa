@@ -1,5 +1,6 @@
 # thirteen-vue-spa
 ## a presentation app
+This single-page app demonstrates how to do things with Vue.js.
 
 ## to view the app online
 See it [here](https://gwvt.github.io/thirteen-vue-spa/). Vue devtools and warnings are turned on for production so you can kick the tires.
@@ -18,7 +19,7 @@ And follow instructions there to spin up a local site.
 ### * A note on this repo ###
 While the code contained herein is generally representative of how one would write Vue for real-world uses, the application structure is specifically geared to the purposes of a presentation.
 
-## Resources on Vue
+## resources on Vue
 
 ### some usual suspects
 
