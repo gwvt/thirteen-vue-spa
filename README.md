@@ -6,7 +6,9 @@ This single-page app demonstrates how to do things with Vue.js.
 See it [here](https://gwvt.github.io/thirteen-vue-spa/). Vue devtools and warnings are turned on for production so you can kick the tires.
 
 ## to run locally
+Clone the repo, then
 ```
+cd thirteen-vue-spa
 npm install
 npm run serve
 ```
