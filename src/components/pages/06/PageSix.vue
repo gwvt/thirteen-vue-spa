@@ -58,7 +58,9 @@
           <input class="input"
                  type="text"
                  placeholder="add something"
-                 v-model="userDirectObject" />
+                 ref="userDirectObjectInput"
+                 v-model="userDirectObject"
+                 v-on:keyup.enter="userDirectObjectEnter" />
         </div>
       </div>
     </div>
@@ -128,6 +130,10 @@ export default {
       } else {
         this.adverbialPhraseIndex += 1;
       }
+    },
+    userDirectObjectEnter() {
+      this.addUserDirectObject = true;
+      this.$refs.userDirectObjectInput.blur();
     },
   },
 };
