@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import store from './store';
+import store from '@/store';
 
 import PageOne from '@/components/pages/01/PageOne.vue';
 import PageTwo from '@/components/pages/02/PageTwo.vue';
