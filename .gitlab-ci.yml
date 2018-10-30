@@ -3,7 +3,6 @@ pages:
   stage: deploy
   environment:
     name: gitlab-pages
-    VUE_APP_STANDALONE_URL: gwvt.gitlab.io/thirteen-vue-standalone/
   script:
     - npm install --progress=false
     # - npm ci
