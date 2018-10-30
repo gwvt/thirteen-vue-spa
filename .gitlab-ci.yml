@@ -4,10 +4,12 @@ pages:
   environment:
     name: gitlab-pages
   script:
-    - npm ci
+    - npm install --progress=false
+    # - npm ci
     - npm run build
-    - mv public public-vue
-    - mv dist public
+    - rm -rf public
+    - mkdir public
+    - cp -r dist/* public
   artifacts:
     paths:
       - public
