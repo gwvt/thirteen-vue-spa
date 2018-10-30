@@ -44,4 +44,7 @@ export default {
 </script>
 
 <style>
+audio {
+  height: 80px;
+}
 </style>
