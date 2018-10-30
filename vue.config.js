@@ -1,4 +1,6 @@
 module.exports = {
   lintOnSave: false,
-  baseUrl: './',
+  baseUrl: process.env.name === 'gitlab-pages'
+    ? '/thirteen-vue-spa/'
+    : './',
 };

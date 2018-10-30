@@ -1,0 +1,15 @@
+pages:
+  image: node:latest
+  stage: deploy
+  environment:
+    name: gitlab-pages
+  script:
+    - npm ci
+    - npm run build
+    - mv public public-vue
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
