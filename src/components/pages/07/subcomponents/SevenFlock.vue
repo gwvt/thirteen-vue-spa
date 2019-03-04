@@ -24,7 +24,7 @@ import SevenChangeBirdsButtons from './SevenChangeBirdsButtons.vue';
 export default {
   name: 'SevenFlock',
   components: {
-    SevenChangeBirdsButtons
+    SevenChangeBirdsButtons,
   },
   props: {
     flock: {

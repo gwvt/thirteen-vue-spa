@@ -1,16 +1,17 @@
 <template>
-  <div>
-    <template v-for="video in videos">
-      <twelve-video-section v-bind="video" />
-    </template>
-  </div>
+<div>
+  <template v-for="video in videos">
+    <twelve-video-section v-bind="video"
+                          :key="video.videoPath" />
+  </template>
+</div>
 </template>
 
 <script>
-import TwelveVideoSection from './subcomponents/TwelveVideoSection.vue';
-import  createVueProject from '@/assets/video/create-vue-project.mp4';
+import createVueProject from '@/assets/video/create-vue-project.mp4';
 import vueAddPlugin from '@/assets/video/vue-add-plugin.mp4';
 import vueGui from '@/assets/video/vue-gui.mp4';
+import TwelveVideoSection from './subcomponents/TwelveVideoSection.vue';
 
 export default {
   name: 'PageTwelve',
@@ -32,11 +33,12 @@ export default {
           heading: 'Use the vue-cli GUI',
           videoPath: vueGui,
         },
-      ]
+      ],
     };
   },
 };
 </script>
 
 <style>
+
 </style>

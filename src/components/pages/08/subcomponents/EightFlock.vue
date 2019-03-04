@@ -28,7 +28,7 @@ import EightChangeBirdsButtons from './EightChangeBirdsButtons.vue';
 export default {
   name: 'EightFlock',
   components: {
-    EightChangeBirdsButtons
+    EightChangeBirdsButtons,
   },
   props: {
     flock: {
