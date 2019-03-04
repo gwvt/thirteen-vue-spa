@@ -15,14 +15,14 @@ export default {
   data() {
     return {
       pageTitles: {
-        one: 'write a single-file component',
+        one: 'create a component',
         two: 'generate content',
         three: 'reuse components',
         four: 'manipulate data',
         five: 'control styling',
         six: 'interact with user input',
         seven: 'manage state',
-        eight: 'create a single-page app',
+        eight: 'add routing',
         nine: 'inspect and debug',
         ten: 'reuse functionalities',
         eleven: 'use open-source libraries',
