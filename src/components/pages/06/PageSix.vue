@@ -95,7 +95,7 @@ export default {
   },
   computed: {
     formattedDirectObjects() {
-      let formatted = this.selectedAndUserDirectObjects[0];
+      let formatted = this.selectedAndUserDirectObjects[0] || '';
       if (this.selectedAndUserDirectObjects.length > 2) {
         this.selectedAndUserDirectObjects.slice(1).forEach((item, index) => {
           if (index + 2 < this.selectedAndUserDirectObjects.length) {
