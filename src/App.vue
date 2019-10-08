@@ -45,6 +45,10 @@ export default {
   padding-bottom: 2rem;
 }
 
+.padded-content {
+  padding: 0 1.5rem;
+}
+
 .sub-heading {
   height: 4rem;
 }

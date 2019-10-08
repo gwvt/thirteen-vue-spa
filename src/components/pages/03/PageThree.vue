@@ -43,14 +43,13 @@ export default {
   },
   computed: {
     birdsInAllFlocks() {
-      const summed = this.flocks.reduce((sum, { birds }) =>
-        sum + birds, 0);
+      const summed = this.flocks.reduce((sum, { birds }) => sum + birds, 0);
       return summed;
     },
   },
   methods: {
     generateBirdsInFlock() {
-      return Math.floor((Math.random() * 5) + 1);
+      return Math.floor((Math.random() * 6) + 1);
     },
   },
 };
