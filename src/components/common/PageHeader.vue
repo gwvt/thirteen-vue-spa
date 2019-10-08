@@ -4,7 +4,7 @@
       {{ routeName }}
   </h3>
   <h4 class="title is-4">
-    {{ pageTitles[routeName]}}
+    {{ pageTitles[routeName] }}
   </h4>
 </div>
 </template>
