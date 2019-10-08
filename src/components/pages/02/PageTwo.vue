@@ -1,17 +1,19 @@
 <template>
 <div class="columns">
-  <div class="column is-6 is-offset-4">
-    <div class="has-text-centered vertical-repeating narrow"
-         v-for="n in 3"
-         v-bind:key="n">
-      <h4 class="title is-4">
-        {{ `Bird ${n}` }}
-      </h4>
-      <div class="vertical-spacing">
-        <img src="@/assets/img/blackbird.png"
-             v-bind:title="`${ordinals[n - 1]} of three blackbirds`"
-             alt="a silhouette of a blackbird"
-             v-if="n !== hide" />
+  <div class="column is-8 is-offset-2">
+    <div class="columns">
+      <div class="column is-4 has-text-centered"
+           v-for="n in 3"
+           v-bind:key="n">
+        <h4 class="title is-4">
+          {{ `Bird ${n}` }}
+        </h4>
+        <div class="vertical-spacing">
+          <img src="@/assets/img/blackbird.png"
+               v-bind:title="`${ordinals[n - 1]} of three blackbirds`"
+               alt="a silhouette of a blackbird"
+               v-if="n !== hide" />
+        </div>
       </div>
     </div>
   </div>

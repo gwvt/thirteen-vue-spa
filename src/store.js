@@ -25,8 +25,7 @@ export default new Vuex.Store({
   },
   getters: {
     birdsInAllFlocks(state) {
-      const summed = state.flocks.reduce((sum, { birds }) =>
-        sum + birds, 0);
+      const summed = state.flocks.reduce((sum, { birds }) => sum + birds, 0);
       return summed;
     },
   },
