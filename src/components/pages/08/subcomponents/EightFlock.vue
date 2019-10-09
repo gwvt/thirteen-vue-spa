@@ -9,16 +9,27 @@
   <eight-change-birds-buttons
     v-bind:flock="flock"
     v-bind:viewMode="viewMode" />
-  <div v-for="n in flock.birds"
+    <div class="columns is-multiline" :class="flockClassObj">
+      <div class="column is-4"
+           v-for="n in flock.birds"
+           v-bind:key="n">
+        <img src="@/assets/img/blackbird.png"
+             title="blackbird"
+             alt="a silhouette of a blackbird" />
+       <p v-if="viewMode === 'flock'">
+         {{ ordinals[n - 1] }} bird {{ flock.setting }}
+       </p>
+      </div>
+    </div>
+
+  <!-- <div v-for="n in flock.birds"
        v-bind:key="n">
     <img class="vertical-repeating narrow"
          src="@/assets/img/blackbird.png"
          title="blackbird"
          alt="a silhouette of a blackbird" />
-    <p v-if="viewMode === 'flock'">
-      {{ ordinals[n - 1] }} bird {{ flock.setting }}
-    </p>
-  </div>
+
+  </div> -->
 </div>
 </template>
 
@@ -48,7 +59,7 @@ export default {
   },
   data() {
     return {
-      ordinals: ['first', 'second', 'third', 'fourth', 'fifth'],
+      ordinals: ['first', 'second', 'third', 'fourth', 'fifth', 'sixth'],
     };
   },
   computed: {
@@ -61,9 +72,23 @@ export default {
       }
       return `There ${wasOrWere} ${this.flock.birds} blackbird${pluralEnding}.`;
     },
+    flockClassObj() {
+      return {
+        'page-mode-flock': this.viewMode === 'page',
+        'flock-mode-flock': this.viewMode === 'flock',
+      };
+    },
   },
 };
 </script>
 
 <style>
+.page-mode-flock {
+  padding: 2rem 1.5rem 0 1.5rem;
+}
+
+.flock-mode-flock {
+  padding: 2rem 12rem 0 12rem;
+}
+
 </style>

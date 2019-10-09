@@ -8,13 +8,15 @@
   </h5>
   <seven-change-birds-buttons
     v-bind:flock="flock" />
-  <div v-for="n in flock.birds"
-       v-bind:key="n">
-    <img class="vertical-repeating narrow"
-         src="@/assets/img/blackbird.png"
-         title="blackbird"
-         alt="a silhouette of a blackbird" />
-  </div>
+    <div class="columns is-multiline padded-content">
+      <div class="column is-4"
+           v-for="n in flock.birds"
+           v-bind:key="n">
+        <img src="@/assets/img/blackbird.png"
+             title="blackbird"
+             alt="a silhouette of a blackbird" />
+      </div>
+    </div>
 </div>
 </template>
 

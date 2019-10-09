@@ -49,6 +49,10 @@ export default {
   padding: 0 1.5rem;
 }
 
+.padded-content-extra {
+  padding: 2rem 12rem 0 12rem;
+}
+
 .sub-heading {
   height: 4rem;
 }
