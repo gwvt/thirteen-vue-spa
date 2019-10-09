@@ -32,7 +32,7 @@ export default new Vuex.Store({
   mutations: {
     changeBirdsInFlock(state, payload) {
       const flock = state.flocks.find(f => f.id === payload.flockId);
-      if (flock.birds + payload.operand > 0 && flock.birds + payload.operand < 6) {
+      if (flock.birds + payload.operand > 0 && flock.birds + payload.operand < 7) {
         flock.birds += payload.operand;
       }
     },

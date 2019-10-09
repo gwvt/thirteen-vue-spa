@@ -61,7 +61,7 @@ export default {
     disabled(buttonName) {
       const disabled = {
         minus: this.flock.birds === 1,
-        plus: this.flock.birds === 5,
+        plus: this.flock.birds === 6,
       };
       return disabled[buttonName];
     },

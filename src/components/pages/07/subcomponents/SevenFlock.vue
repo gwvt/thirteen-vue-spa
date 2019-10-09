@@ -31,7 +31,7 @@ export default {
       type: Object,
       required: true,
       validator(prop) {
-        return prop.birds > 0 && prop.birds < 6;
+        return prop.birds > 0 && prop.birds < 7;
       },
     },
   },
