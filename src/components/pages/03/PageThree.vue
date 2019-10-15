@@ -7,8 +7,8 @@
   </div>
   <div class="columns">
     <div class="column is-4"
-         v-for="(flock, index) in flocks"
-         v-bind:key="index">
+         v-for="flock in flocks"
+         v-bind:key="flock.setting">
       <three-flock v-bind:flock="flock" />
     </div>
   </div>
