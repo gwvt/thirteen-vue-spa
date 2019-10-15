@@ -1,6 +1,9 @@
 <template>
 <div class="columns">
-  <div class="column is-8 is-offset-2">
+  <div class="column is-8">
+    <h4 class="title is-4">
+      See the {{ birdsShowing }} birds.
+    </h4>
     <div class="columns">
       <div class="column is-4 has-text-centered"
            v-for="n in 3"
@@ -31,6 +34,11 @@ export default {
   },
   beforeMount() {
     this.hideNext();
+  },
+  computed: {
+    birdsShowing() {
+      return !this.hide ? 'three' : 'two';
+    },
   },
   methods: {
     hideNext() {
