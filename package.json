@@ -2,8 +2,6 @@
   "name": "thirteen-vue-spa",
   "version": "0.1.0",
   "author": "Gregory White",
-  "license": "CC BY-NC-SA 4.0",
-  "homepage": "git@github.com:gwvt/thirteen-vue-spa",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -11,6 +9,7 @@
     "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
   "dependencies": {
+    "core-js": "^3.1.2",
     "moment": "^2.24.0",
     "vue": "^2.6.10",
     "vue-audio-visual": "^1.4.1",
@@ -18,13 +17,16 @@
     "vuex": "^3.1.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-eslint": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
+    "@vue/cli-plugin-babel": "^4.0.3",
+    "@vue/cli-plugin-eslint": "^4.0.3",
+    "@vue/cli-service": "^4.0.3",
     "@vue/eslint-config-airbnb": "^4.0.1",
+    "eslint": "^4.19.1",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
     "vue-gh-pages": "^1.19.0",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "homepage": "git@github.com:gwvt/thirteen-vue-spa",
+  "license": "CC BY-NC-SA 4.0"
 }
