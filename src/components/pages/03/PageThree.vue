@@ -7,24 +7,24 @@
   </div>
   <div class="columns">
     <div class="column is-4"
-         v-for="(flock, index) in flocks"
-         v-bind:key="index">
-      <three-flock v-bind:flock="flock" />
+         v-for="flock in flocks"
+         v-bind:key="flock.setting"> <!-- ∆5 -->
+      <three-flock v-bind:flock="flock" /> <!-- ∆1, ∆4 -->
     </div>
   </div>
 </div>
 </template>
 
 <script>
-import ThreeFlock from './subcomponents/ThreeFlock.vue';
+import ThreeFlock from './subcomponents/ThreeFlock.vue'; // ∆2
 
 export default {
   name: 'PageThree',
-  components: {
+  components: { // ∆3
     ThreeFlock,
   },
   data() {
-    return {
+    return { // ∆6
       flocks: [
         {
           setting: 'in the autumn',

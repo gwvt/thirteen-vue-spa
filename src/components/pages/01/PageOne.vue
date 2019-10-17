@@ -1,13 +1,13 @@
-<template>
+<template> <!-- ∆1 -->
 <p>
-  {{ phrase }}
+  {{ phrase }} <!-- ∆3 -->
 </p>
 </template>
 
 <script>
 export default {
   name: 'PageOne',
-  data() {
+  data() { // ∆2
     return {
       phrase: 'a blackbird',
     };

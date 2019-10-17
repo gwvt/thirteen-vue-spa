@@ -1,7 +1,7 @@
-<template>
+<template> <!-- ∆1 -->
 <div class="has-text-centered">
   <h4 class="title is-4 sub-heading">
-    {{ flock.setting }}
+    {{ flock.setting }} <!-- ∆4 -->
   </h4>
   <h5 class="title is-5 sub-heading">
     {{ birdsInFlockText }}
@@ -21,20 +21,14 @@
 <script>
 export default {
   name: 'Flock',
-  props: {
-    flock: {
-      type: Object,
-      required: true,
-      validator(prop) {
-        return prop.birds > 0 && prop.birds < 7;
-      },
-    },
+  props: { // ∆2
+    flock: Object,
   },
   computed: {
     birdsInFlockText() {
       let wasOrWere = 'was';
       let pluralEnding = '';
-      if (this.flock.birds > 1) {
+      if (this.flock.birds > 1) { // ∆3
         wasOrWere = 'were';
         pluralEnding = 's';
       }

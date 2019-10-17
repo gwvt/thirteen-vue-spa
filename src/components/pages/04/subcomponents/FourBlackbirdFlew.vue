@@ -38,7 +38,8 @@ export default {
   computed: {
     nowWithoutBlackbird() {
       const timeString = new Date().toLocaleTimeString();
-      return `It was ${timeString}.`;
+      const phrase = `It was ${timeString}.`;
+      return phrase;
     },
     nowWithBlackbird() {
       const timeString = new Date().toLocaleTimeString();
