@@ -9,18 +9,18 @@
     <div class="column is-4"
          v-for="flock in flocks"
          v-bind:key="flock.setting"> <!-- ∆5 -->
-      <three-flock v-bind:flock="flock" /> <!-- ∆1, ∆4 -->
+      <three-flock v-bind:flock="flock" /> <!-- ∆3, ∆4 -->
     </div>
   </div>
 </div>
 </template>
 
 <script>
-import ThreeFlock from './subcomponents/ThreeFlock.vue'; // ∆2
+import ThreeFlock from './subcomponents/ThreeFlock.vue'; // ∆1
 
 export default {
   name: 'PageThree',
-  components: { // ∆3
+  components: { // ∆2
     ThreeFlock,
   },
   data() {
