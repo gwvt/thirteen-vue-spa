@@ -20,15 +20,6 @@
       </p>
     </div>
   </div>
-
-  <!-- <div v-for="n in flock.birds"
-       v-bind:key="n">
-    <img class="vertical-repeating narrow"
-         src="@/assets/img/blackbird.png"
-         title="blackbird"
-         alt="a silhouette of a blackbird" />
-
-  </div> -->
 </div>
 </template>
 
