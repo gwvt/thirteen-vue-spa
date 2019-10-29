@@ -20,14 +20,24 @@
       </a>
     </div>
   </div>
-  <div class="column is-3 has-text-centered">
+  <div class="column is-3 button-wrapper has-text-centered">
     <h5 class="title is-5">
       It was
     </h5>
-    <a class="button"
-       v-on:click="toggleFaded">
-       {{ fadedButtonDisplay }}
-    </a>
+    <div class="button-wrapper">
+      <a class="button"
+         v-on:click="toggleFaded"
+         :disabled="!fadedIsActive">
+         Afternoon
+      </a>
+    </div>
+    <div class="button-wrapper">
+      <a class="button"
+         v-on:click="toggleFaded"
+         :disabled="fadedIsActive">
+         Evening
+      </a>
+    </div>
   </div>
 </div>
 </template>
@@ -83,6 +93,10 @@ export default {
 </script>
 
 <style scoped>
+h5 {
+  margin-top: 3px;
+}
+
 .button-wrapper {
   margin: 0 0 0.5rem 0;
 }
