@@ -3,20 +3,18 @@
   <h4 class="title is-4 sub-heading">
     {{ flock.setting }}
   </h4>
-  <h5 class="title is-5">
-    {{ birdsInFlockText }}
-  </h5>
-  <seven-change-birds-buttons
-    v-bind:flock="flock" />
-    <div class="columns is-multiline padded-content">
-      <div class="column is-4"
-           v-for="n in flock.birds"
-           v-bind:key="n">
-        <img src="@/assets/img/blackbird.png"
-             title="blackbird"
-             alt="a silhouette of a blackbird" />
-      </div>
+  <h5 class="title is-5"
+      v-html="birdsInFlockText" />
+  <seven-change-birds-buttons v-bind:flock="flock" />
+  <div class="columns is-multiline padded-content">
+    <div class="column is-4"
+         v-for="n in flock.birds"
+         v-bind:key="n">
+      <img src="@/assets/img/blackbird.png"
+           title="blackbird"
+           alt="a silhouette of a blackbird" />
     </div>
+  </div>
 </div>
 </template>
 
@@ -45,11 +43,12 @@ export default {
         wasOrWere = 'were';
         pluralEnding = 's';
       }
-      return `There ${wasOrWere} ${this.flock.birds} blackbird${pluralEnding}.`;
+      return `There ${wasOrWere} ${this.flock.birds}<br />blackbird${pluralEnding}.`;
     },
   },
 };
 </script>
 
 <style>
+
 </style>
