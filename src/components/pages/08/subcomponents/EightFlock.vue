@@ -56,10 +56,12 @@ export default {
     birdsInFlockText() {
       let wasOrWere = 'was';
       let pluralEnding = '';
+
       if (this.flock.birds > 1) {
         wasOrWere = 'were';
         pluralEnding = 's';
       }
+
       return `There ${wasOrWere} ${this.flock.birds}<br />blackbird${pluralEnding}.`;
     },
     flockClassObj() {

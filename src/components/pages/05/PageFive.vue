@@ -13,11 +13,11 @@
     <div class="button-wrapper"
          v-for="color in colors"
          v-bind:key="color.name">
-      <a class="button"
+      <button class="button"
          v-bind:class="`is-${color.name}`"
          v-on:click="changeColor(color.name)">
          {{ `${color.display} light` }}
-      </a>
+      </button>
     </div>
   </div>
   <div class="column is-3 button-wrapper has-text-centered">
@@ -25,18 +25,18 @@
       It was
     </h5>
     <div class="button-wrapper">
-      <a class="button"
+      <button class="button"
          v-on:click="toggleFaded"
          :disabled="!fadedIsActive">
          Afternoon
-      </a>
+      </button>
     </div>
     <div class="button-wrapper">
-      <a class="button"
+      <button class="button"
          v-on:click="toggleFaded"
          :disabled="fadedIsActive">
          Evening
-      </a>
+      </button>
     </div>
   </div>
 </div>
@@ -74,7 +74,9 @@ export default {
       const classes = {
         faded: this.fadedIsActive,
       };
+
       classes[`has-background-${this.activeColorName}`] = true;
+
       return classes;
     },
     fadedButtonDisplay() {

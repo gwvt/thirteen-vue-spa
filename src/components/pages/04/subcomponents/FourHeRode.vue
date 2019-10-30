@@ -8,10 +8,10 @@
       <div class="vertical-buttons"
            v-for="button in buttons"
            v-bind:key="button.display">
-        <a class="button"
+        <button class="button"
            v-on:click="button.callback">
           {{ button.display }}
-        </a>
+        </button>
       </div>
     </div>
     <div class="column is-4 is-offset-2">

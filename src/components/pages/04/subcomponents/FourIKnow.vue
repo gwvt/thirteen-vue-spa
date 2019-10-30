@@ -5,10 +5,10 @@
   </four-sub-heading>
   <div class="columns">
     <div class="column is-2">
-      <a class="button"
+      <button class="button"
          v-on:click="addWhatIKnow">
         what
-      </a>
+      </button>
     </div>
     <div class="column is-6 is-offset-2">
       <p>
@@ -35,6 +35,7 @@ export default {
   methods: {
     addWhatIKnow() {
       let phrase = '';
+
       if (this.whatIKnow) {
         phrase += ' and';
         const toggle = Math.floor(Math.random() * 3);
@@ -48,6 +49,7 @@ export default {
       } else {
         phrase += ' noble accents';
       }
+
       this.whatIKnow += phrase;
     },
   },

@@ -47,6 +47,7 @@ export default {
       } else {
         this.hide = 0;
       }
+
       setTimeout(this.hideNext, 1500);
     },
   },

@@ -51,11 +51,13 @@ export default {
   computed: {
     tabClasses() {
       const classes = {};
+
       this.tabs.forEach((t) => {
         classes[t.id] = {
           'is-active': this.activeTabName === t.id,
         };
       });
+
       return classes;
     },
   },

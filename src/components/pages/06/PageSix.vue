@@ -65,10 +65,10 @@
       </div>
     </div>
     <div class="column is-3">
-      <a class="button"
+      <button class="button"
          v-on:click="advanceAdverbialPhraseIndex">
         How
-      </a>
+      </button>
     </div>
   </div>
 </div>
@@ -96,6 +96,7 @@ export default {
   computed: {
     formattedDirectObjects() {
       let formatted = this.selectedAndUserDirectObjects[0] || '';
+
       if (this.selectedAndUserDirectObjects.length > 2) {
         this.selectedAndUserDirectObjects.slice(1).forEach((item, index) => {
           if (index + 2 < this.selectedAndUserDirectObjects.length) {
@@ -107,13 +108,16 @@ export default {
       } else if (this.selectedAndUserDirectObjects.length === 2) {
         formatted += ` and ${this.selectedAndUserDirectObjects[1]}`;
       }
+
       return formatted;
     },
     selectedAndUserDirectObjects() {
       const combined = this.selectedDirectObjects.slice();
+
       if (this.addUserDirectObject && this.userDirectObject) {
         combined.push(this.userDirectObject);
       }
+
       return combined;
     },
     adverbialPhraseString() {

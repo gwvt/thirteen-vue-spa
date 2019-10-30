@@ -5,17 +5,17 @@
   </ten-sub-heading>
   <div class="columns">
     <div class="column is-2">
-      <a class="button"
+      <button class="button"
          v-bind:disabled="disableButton('movingThings', 0)"
          v-on:click="addBy('movingThings', -1, 0)">
         fewer
-      </a>
+      </button>
     </div>
     <div class="column is-2">
-      <a class="button"
+      <button class="button"
          v-on:click="addBy('movingThings', 1)">
         more
-      </a>
+      </button>
     </div>
     <div class="column is-4">
       <p>
@@ -44,6 +44,7 @@ export default {
   computed: {
     phrase() {
       let phrase = '';
+
       if (this.movingThings === 1) {
         phrase = 'the only moving thing';
       } else if (this.movingThings < 1) {
@@ -51,6 +52,7 @@ export default {
       } else {
         phrase = `${this.movingThings} moving things`;
       }
+
       return phrase;
     },
   },

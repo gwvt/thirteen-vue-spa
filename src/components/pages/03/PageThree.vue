@@ -43,7 +43,8 @@ export default {
   },
   computed: {
     birdsInAllFlocks() {
-      return this.flocks.reduce((sum, { birds }) => sum + birds, 0);
+      return this.flocks
+        .reduce((sum, { birds }) => sum + birds, 0);
     },
   },
   methods: {

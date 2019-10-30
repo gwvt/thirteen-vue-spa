@@ -2,10 +2,10 @@
 <div>
   <div class="columns">
     <div class="column is-2 page-section">
-      <a class="button is-primary"
+      <button class="button is-primary"
          v-on:click="goBack">
         Go back
-      </a>
+      </button>
     </div>
   </div>
   <eight-flock v-if="flock"

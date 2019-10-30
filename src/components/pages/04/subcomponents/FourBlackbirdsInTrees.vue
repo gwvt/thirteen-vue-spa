@@ -8,10 +8,10 @@
   </four-sub-heading>
   <div class="columns">
     <div class="column is-2">
-      <a class="button"
+      <button class="button"
          v-on:click="addToBlackbirdsList">
         look
-      </a>
+      </button>
     </div>
     <div class="column is-4 is-offset-2">
       <p v-for="(number, index) in blackbirdsList"
@@ -56,9 +56,11 @@ export default {
     },
     formatBlackbirds(number) {
       let formatted = `${number} blackbird`;
+
       if (number !== 1) {
         formatted += 's';
       }
+
       return formatted;
     },
   },

@@ -5,10 +5,10 @@
   </four-sub-heading>
   <div class="columns">
     <div class="column is-2">
-      <a class="button"
+      <button class="button"
          v-on:click="toggleFlown">
         flew
-      </a>
+      </button>
     </div>
     <div class="column is-6 is-offset-2">
       <p>
@@ -39,14 +39,17 @@ export default {
     nowWithoutBlackbird() { // ∆2
       const timeString = new Date().toLocaleTimeString();
       const phrase = `It was ${timeString}.`;
+
       return phrase;
     },
     nowWithBlackbird() { // ∆1
       const timeString = new Date().toLocaleTimeString();
       let phrase = `It was ${timeString}.`;
+
       if (this.flown) {
         phrase += ' The blackbird flew out of sight.';
       }
+
       return phrase;
     },
   },

@@ -5,10 +5,10 @@
   </ten-sub-heading>
   <div class="columns">
     <div class="column is-2">
-      <a class="button"
+      <button class="button"
          v-on:click="addBy('mountains', 10)">
         more
-      </a>
+      </button>
     </div>
     <div class="column is-4 is-offset-2">
       <p>
