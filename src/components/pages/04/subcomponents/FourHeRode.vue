@@ -50,23 +50,23 @@ export default {
           display: 'shadow',
         },
       ],
-      rodeWith: {
+      rodeWith: { // ∆1
         coaches: 1,
       },
     };
   },
   methods: {
-    addCoaches() {
+    addCoaches() { // ∆2, ∆5
       this.rodeWith.coaches += 1;
     },
-    addFears() {
+    addFears() { // ∆3
       if (!this.rodeWith.fears) {
         this.rodeWith.fears = 1;
       } else {
         this.rodeWith.fears += 1;
       }
     },
-    addShadows() {
+    addShadows() { // ∆4
       if (!this.rodeWith.shadows) {
         this.rodeWith = {
           shadows: this.rodeWith.coaches + 1,
