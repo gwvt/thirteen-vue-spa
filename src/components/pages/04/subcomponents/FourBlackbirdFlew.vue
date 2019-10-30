@@ -36,12 +36,12 @@ export default {
     };
   },
   computed: {
-    nowWithoutBlackbird() {
+    nowWithoutBlackbird() { // ∆2
       const timeString = new Date().toLocaleTimeString();
       const phrase = `It was ${timeString}.`;
       return phrase;
     },
-    nowWithBlackbird() {
+    nowWithBlackbird() { // ∆1
       const timeString = new Date().toLocaleTimeString();
       let phrase = `It was ${timeString}.`;
       if (this.flown) {

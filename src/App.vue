@@ -45,33 +45,23 @@ export default {
   padding-bottom: 2rem;
 }
 
-.padded-content {
-  padding: 0 1.5rem;
-}
-
-.padded-content-extra {
-  padding: 2rem 12rem 0 12rem;
-}
-
 .sub-heading {
   height: 4rem;
 }
 
-.vertical-repeating {
+.vertical-buttons {
   margin-top: 1rem;
-}
-
-.narrow {
-  width: 30%;
-  max-width: 10rem;
-}
-
-.vertical-spacing {
-  height: 5rem;
-  margin-bottom: 3rem;
 }
 
 .button-row {
   height: 3rem;
+}
+
+.page-mode-flock {
+  padding: 2rem 1.5rem 0 1.5rem;
+}
+
+.flock-mode-flock {
+  padding: 2rem 12rem 0 12rem;
 }
 </style>

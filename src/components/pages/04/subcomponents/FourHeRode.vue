@@ -5,7 +5,7 @@
   </four-sub-heading>
   <div class="columns">
     <div class="column is-2">
-      <div class="vertical-repeating"
+      <div class="vertical-buttons"
            v-for="button in buttons"
            v-bind:key="button.display">
         <a class="button"

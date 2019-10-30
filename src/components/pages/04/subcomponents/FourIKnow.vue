@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      whatIKnow: '',
+      whatIKnow: '', // ∆1
     };
   },
   methods: {

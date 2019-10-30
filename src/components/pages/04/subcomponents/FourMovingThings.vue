@@ -19,7 +19,7 @@
     </div>
     <div class="column is-4">
       <p>
-        {{ phrase }}
+        {{ phrase }} <!-- ∆3  -->
       </p>
     </div>
   </div>
@@ -40,9 +40,9 @@ export default {
     };
   },
   computed: {
-    phrase() {
+    phrase() { // ∆1
       let phrase = '';
-      if (this.movingThings === 1) {
+      if (this.movingThings === 1) { // ∆2
         phrase = 'the only moving thing';
       } else if (this.movingThings < 1) {
         phrase = 'no moving things';

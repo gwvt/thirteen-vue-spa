@@ -6,7 +6,7 @@
   <h5 class="title is-5"
       v-html="birdsInFlockText" />
   <seven-change-birds-buttons v-bind:flock="flock" />
-  <div class="columns is-multiline padded-content">
+  <div class="columns is-multiline page-mode-flock">
     <div class="column is-4"
          v-for="n in flock.birds"
          v-bind:key="n">

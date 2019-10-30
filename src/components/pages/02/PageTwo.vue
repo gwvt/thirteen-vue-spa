@@ -11,7 +11,7 @@
         <h4 class="title is-4">
           {{ `Bird ${n}` }} <!-- ∆2 -->
         </h4>
-        <div class="vertical-spacing">
+        <div>
           <img src="@/assets/img/blackbird.png"
                v-bind:title="`${ordinals[n - 1]} of three blackbirds`"
                alt="a silhouette of a blackbird"

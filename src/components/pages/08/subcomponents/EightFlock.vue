@@ -73,11 +73,4 @@ export default {
 </script>
 
 <style>
-.page-mode-flock {
-  padding: 2rem 1.5rem 0 1.5rem;
-}
-
-.flock-mode-flock {
-  padding: 2rem 12rem 0 12rem;
-}
 </style>
