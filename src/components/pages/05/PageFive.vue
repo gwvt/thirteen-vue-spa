@@ -3,7 +3,7 @@
   <div class="column is-6">
     <div class="img-background">
       <div class="img-wrapper"
-           v-bind:class="imgColor">
+           v-bind:class="imgColorClassObj"> <!-- ∆10 -->
         <img src="@/assets/img/blackbird.png"
              alt="blackbird" />
       </div>
@@ -15,9 +15,9 @@
          v-bind:key="color.name">
       <button class="button"
          v-bind:class="`is-${color.name}`"
-         v-on:click="changeColor(color.name)">
+         v-on:click="changeImgColorName(color.name)">
          {{ `${color.display} light` }}
-      </button>
+      </button> <!-- ∆7, ∆8 -->
     </div>
   </div>
   <div class="column is-3 button-wrapper has-text-centered">
@@ -29,7 +29,7 @@
          v-on:click="toggleFaded"
          :disabled="!fadedIsActive">
          Afternoon
-      </button>
+      </button> <!-- ∆9 -->
     </div>
     <div class="button-wrapper">
       <button class="button"
@@ -47,7 +47,7 @@ export default {
   name: 'PageFive',
   data() {
     return {
-      colors: [
+      colors: [ // ∆3
         {
           name: 'success',
           display: 'green',
@@ -65,27 +65,24 @@ export default {
           display: 'golden',
         },
       ],
-      activeColorName: 'success',
-      fadedIsActive: false,
+      imgColorName: 'success', // ∆4
+      fadedIsActive: false, // ∆5
     };
   },
   computed: {
-    imgColor() {
-      const classes = {
+    imgColorClassObj() { // ∆11
+      const classObj = {
         faded: this.fadedIsActive,
       };
 
-      classes[`has-background-${this.activeColorName}`] = true;
+      classObj[`has-background-${this.imgColorName}`] = true;
 
-      return classes;
-    },
-    fadedButtonDisplay() {
-      return this.fadedIsActive ? 'Evening' : 'Afternoon';
+      return classObj;
     },
   },
-  methods: {
-    changeColor(name) {
-      this.activeColorName = name;
+  methods: { // ∆6
+    changeImgColorName(name) {
+      this.imgColorName = name;
     },
     toggleFaded() {
       this.fadedIsActive = !this.fadedIsActive;
@@ -94,7 +91,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped> /* ∆1 */
 h5 {
   margin-top: 3px;
 }
@@ -115,7 +112,7 @@ h5 {
   padding: 0.7rem;
 }
 
-.faded {
+.faded { /* ∆2 */
   opacity: 0.4;
 }
 </style>
