@@ -6,7 +6,7 @@
   <div class="columns">
     <div class="column is-2">
       <button class="button"
-         v-on:click="addBy('mountains', 10)">
+         v-on:click="addBy('mountains', 10)"> <!-- ∆3 -->
         more
       </button>
     </div>
@@ -20,12 +20,12 @@
 </template>
 
 <script>
-import utilities from '@/mixins/utilities';
+import { utilities } from '@/mixins'; // ∆1
 import TenSubHeading from './TenSubHeading.vue';
 
 export default {
   name: 'SnowyMountains',
-  mixins: [utilities],
+  mixins: [utilities], // ∆2
   components: {
     TenSubHeading,
   },

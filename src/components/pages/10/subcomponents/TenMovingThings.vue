@@ -7,7 +7,7 @@
     <div class="column is-2">
       <button class="button"
          v-bind:disabled="disableButton('movingThings', 0)"
-         v-on:click="addBy('movingThings', -1, 0)">
+         v-on:click="addBy('movingThings', -1, 0)"> <!-- ∆1 -->
         fewer
       </button>
     </div>
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import utilities from '@/mixins/utilities';
+import { utilities } from '@/mixins';
 import TenSubHeading from './TenSubHeading.vue';
 
 export default {
