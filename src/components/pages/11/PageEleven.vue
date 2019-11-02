@@ -2,7 +2,7 @@
 <div>
   <av-line ref="avLine"
            line-color="gray"
-           v-bind:audio-src="audioSrc" />
+           v-bind:audio-src="audioSrc" /> <!-- ∆1 -->
   <p v-for="blackbird in blackbirds"
      v-bind:key="blackbird">
     {{ blackbird }}
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import moment from 'moment';
+import moment from 'moment'; // ∆2
 import audioSrc from '@/assets/audio/blackbird.mp3';
 
 export default {
@@ -24,7 +24,7 @@ export default {
     };
   },
   computed: {
-    nowFormatted() {
+    nowFormatted() { // ∆3
       return moment(this.now).format('dddd, MMMM Do, YYYY [at] h:mm:ss a');
     },
   },
