@@ -13,6 +13,7 @@
                v-bind:key="subject">
             <label class="radio">
               <input type="radio"
+                     name="subject"
                      v-bind:value="subject"
                      v-model="selectedSubject" />
                 {{ subject }}
@@ -25,9 +26,10 @@
       <div class="field">
         <div class="control">
           <div class="select">
-            <select v-model="selectedVerb">
+            <select v-model="selectedVerb"> <!-- ∆1 -->
               <option v-for="verb in verbs"
-                      v-bind:key="verb">
+                      v-bind:key="verb"
+                      v-bind:value="verb">
                 {{ verb }}
               </option>
             </select>
@@ -60,7 +62,7 @@
                  placeholder="add something"
                  ref="userDirectObjectInput"
                  v-model="userDirectObject"
-                 v-on:keyup.enter="userDirectObjectEnter" />
+                 v-on:keyup.enter="userDirectObjectEnter" /> <!-- ∆2 -->
         </div>
       </div>
     </div>
