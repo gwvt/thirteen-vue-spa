@@ -20,7 +20,7 @@ import Error from '@/components/common/Error.vue';
 Vue.use(Router);
 
 const router = new Router({
-  routes: [
+  routes: [ // ∆1
     {
       path: '/one',
       component: PageOne,
@@ -52,7 +52,12 @@ const router = new Router({
     {
       path: '/eight',
       component: PageEight,
-    },
+    }, // ∆2
+    {
+      path: '/eight/flock/:flockId',
+      name: 'flock',
+      component: EightFlockView,
+    }, // ∆3
     {
       path: '/nine',
       component: PageNine,
@@ -74,12 +79,6 @@ const router = new Router({
       redirect: {
         path: '/one',
       },
-    },
-    {
-      path: '/eight/flock/:flockId',
-      name: 'flock',
-      component: EightFlockView,
-      props: true,
     },
     {
       path: '/error',

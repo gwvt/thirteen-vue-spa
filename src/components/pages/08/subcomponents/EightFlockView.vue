@@ -22,12 +22,6 @@ export default {
   components: {
     EightFlock,
   },
-  props: {
-    flockId: {
-      type: String,
-      required: false,
-    },
-  },
   data() {
     return {
       flock: null,
@@ -45,8 +39,8 @@ export default {
     },
   },
   created() {
-    this.flock = this.$store.state.flocks
-      .find(flock => flock.id === this.flockId);
+    this.flock = this.$store.state.flocks // ∆1
+      .find(flock => flock.id === this.$route.params.flockId);
   },
   methods: {
     goBack() {

@@ -5,10 +5,10 @@
         v-for="path in paths"
         v-bind:key="path">
       <router-link v-bind:to="path">
-        {{ path | formatForNav }}
-      </router-link>
+        {{ formatForNav(path) }}
+      </router-link> <!-- ∆1 -->
     </li>
-    <li>
+    <li class="menu-item">
       <a v-bind:href="standaloneURL">
         Thirteen
       </a>
@@ -34,15 +34,9 @@ export default {
         .map(r => r.path);
     },
   },
-  filters: {
+  methods: {
     formatForNav(path) {
-      let formatted = '';
-
-      if (typeof path === 'string') {
-        formatted = `${path.charAt(1).toUpperCase()}${path.slice(2)}`;
-      }
-
-      return formatted;
+      return path.charAt(1).toUpperCase() + path.slice(2);
     },
   },
 };

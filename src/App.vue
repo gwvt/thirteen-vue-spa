@@ -2,11 +2,11 @@
 <div class="columns app"
      id="app">
   <div class="column is-2 side">
-    <side-nav />
+    <side-nav /> <!-- ∆1 -->
   </div>
   <div class="column is-10 main">
     <page-header />
-    <router-view v-bind:key="$route.path" />
+    <router-view v-bind:key="$route.path" /> <!-- ∆2 -->
   </div>
 </div>
 </template>
