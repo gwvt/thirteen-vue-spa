@@ -6,7 +6,7 @@
   <div class="columns">
     <div class="column is-2">
       <button class="button"
-         v-on:click="addMountains"> <!-- ∆2 -->
+         v-on:click="addMountains"> <!-- ∆3 -->
         more
       </button>
     </div>
@@ -33,7 +33,7 @@ export default {
     };
   },
   methods: {
-    addMountains() { // ∆3
+    addMountains() { // ∆2
       this.mountains += 10;
     },
   },

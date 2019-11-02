@@ -12,10 +12,10 @@
     </div>
     <div class="column is-6 is-offset-2">
       <p>
-        {{ nowWithoutBlackbird }}
+        {{ nowWithBlackbird }}
       </p>
       <p>
-        {{ nowWithBlackbird }}
+        {{ nowWithoutBlackbird }}
       </p>
     </div>
   </div>
@@ -36,12 +36,6 @@ export default {
     };
   },
   computed: {
-    nowWithoutBlackbird() { // ∆2
-      const timeString = new Date().toLocaleTimeString();
-      const phrase = `It was ${timeString}.`;
-
-      return phrase;
-    },
     nowWithBlackbird() { // ∆1
       const timeString = new Date().toLocaleTimeString();
       let phrase = `It was ${timeString}.`;
@@ -52,9 +46,15 @@ export default {
 
       return phrase;
     },
+    nowWithoutBlackbird() { // ∆2
+      const timeString = new Date().toLocaleTimeString();
+      const phrase = `It was ${timeString}.`;
+
+      return phrase;
+    },
   },
   methods: {
-    toggleFlown() {
+    toggleFlown() { // ∆3
       this.flown = !this.flown;
     },
   },
