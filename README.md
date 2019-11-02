@@ -3,7 +3,7 @@
 This single-page app demonstrates how to do things with Vue.js.
 
 ## to view the app online
-See it [here](https://gwvt.gitlab.io/thirteen-vue-spa/). Vue devtools and warnings are turned on for production so you can kick the tires.
+See it [here](https://gwvt.github.io/thirteen-vue-spa/). Vue devtools and warnings are turned on for production so you can kick the tires.
 
 ## to run locally
 Clone the repo, then
@@ -12,7 +12,7 @@ cd thirteen-vue-spa
 npm install
 npm run serve
 ```
-Then, to link with a locally run [thirteen-vue-standalone](https://gitlab.com/gwvt/thirteen-vue-standalone), add a file .env.development.local to the root dir with this content:
+Then, to link with a locally run [thirteen-vue-standalone](https://github.com/gwvt/thirteen-vue-standalone), add a file .env.development.local to the root dir with this content:
 ```
 VUE_APP_STANDALONE_URL=localhost:8081
 ```
