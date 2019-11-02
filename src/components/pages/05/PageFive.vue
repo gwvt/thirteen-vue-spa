@@ -27,14 +27,14 @@
     <div class="button-wrapper">
       <button class="button"
          v-on:click="toggleFaded"
-         :disabled="!fadedIsActive">
+         :disabled="!faded">
          Afternoon
       </button> <!-- ∆9 -->
     </div>
     <div class="button-wrapper">
       <button class="button"
          v-on:click="toggleFaded"
-         :disabled="fadedIsActive">
+         :disabled="faded">
          Evening
       </button>
     </div>
@@ -66,13 +66,13 @@ export default {
         },
       ],
       imgColorName: 'success', // ∆4
-      fadedIsActive: false, // ∆5
+      faded: false, // ∆5
     };
   },
   computed: {
     imgColorClassObj() { // ∆11
       const classObj = {
-        faded: this.fadedIsActive,
+        faded: this.faded,
       };
 
       classObj[`has-background-${this.imgColorName}`] = true;
@@ -85,7 +85,7 @@ export default {
       this.imgColorName = name;
     },
     toggleFaded() {
-      this.fadedIsActive = !this.fadedIsActive;
+      this.faded = !this.faded;
     },
   },
 };
