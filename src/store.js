@@ -4,7 +4,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
+  state: { // ∆1
     flocks: [
       {
         id: '1',
@@ -23,13 +23,13 @@ export default new Vuex.Store({
       },
     ],
   },
-  getters: {
+  getters: { // ∆2
     birdsInAllFlocks(state) {
       const summed = state.flocks.reduce((sum, { birds }) => sum + birds, 0);
       return summed;
     },
   },
-  mutations: {
+  mutations: { // ∆3
     changeBirdsInFlock(state, payload) {
       const flock = state.flocks.find(f => f.id === payload.flockId);
       if (flock.birds + payload.operand > 0 && flock.birds + payload.operand < 7) {

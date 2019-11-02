@@ -43,10 +43,10 @@ export default {
   },
   computed: {
     flocks() {
-      return this.$store.state.flocks;
+      return this.$store.state.flocks; // ∆1
     },
     birdsInAllFlocks() {
-      return this.$store.getters.birdsInAllFlocks;
+      return this.$store.getters.birdsInAllFlocks; // ∆2
     },
   },
 };

@@ -5,7 +5,7 @@
          v-bind:key="button.name">
       <button class="button"
          v-bind:disabled="disabled(button.name)"
-         v-on:click="changeBirdsInFlock(flock.id, button.operand)">
+         v-on:click="changeBirdsInFlock(flock.id, button.operand)"> <!-- ∆1 -->
         {{ button.display }}
       </button>
     </div>
@@ -38,7 +38,7 @@ export default {
     };
   },
   methods: {
-    changeBirdsInFlock(flockId, operand) {
+    changeBirdsInFlock(flockId, operand) { // ∆2
       this.$store.commit('changeBirdsInFlock', {
         flockId,
         operand,
