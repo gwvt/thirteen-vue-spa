@@ -30,10 +30,14 @@ export default {
     return {
       hide: -1,
       ordinals: ['first', 'second', 'third'],
+      componentActive: true,
     };
   },
   beforeMount() { // ∆5
     this.hideNext();
+  },
+  beforeDestroy() {
+    this.componentActive = false;
   },
   computed: { // ∆6
     birdsShowing() {
@@ -48,7 +52,9 @@ export default {
         this.hide = 0;
       }
 
-      setTimeout(this.hideNext, 1500);
+      if (this.componentActive) {
+        setTimeout(this.hideNext, 1500);
+      }
     },
   },
 };
